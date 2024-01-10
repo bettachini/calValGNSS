@@ -1,0 +1,38 @@
+# tareas
+- Hace un inventario completo
+    - números de series
+    - cables tipos
+    - conectores (hay que comprar sma)
+- Medir cable antena antes de subir
+    - Para que alcance en edificios de distintos institutos (edificios)
+- Instalar soft Pola 5 en 
+    - configuración automática: sistema viejo tomaba 100 mediciones -> promedio 
+- Procesado de los RINEX
+    - Medición de common plot, se puede hacer con vista común con los CGTTS
+    - Pero con RINEX se puede trabajar más fino
+        - Los canadienses se calibran un receptor en base de uno del NIST y 
+        - Luego de ensayar con CGTTS
+- Caracterizar cables A y B
+    - Estudiar repetitibilidad de medición de delay en cable
+        - no puede ser tan estable en la escala de ns
+        - e.g. enrollado, desplegable
+    - temperatura del dieléctrico
+        - cámara térmica del INTI para hacerle un ciclado
+        - barrido delay vs T
+- Contador de intervalo de tiempo (TIC) Berkeley Nucleonics
+    - Programar adquisición de datos en Python -> calcular estadística en la compu
+    - Expresión de incertidumbre compleja en función de
+        - rise-time
+        - jitter
+        - trigger level (puede no ser estable)
+        - Está explicada en el manual del contador Agilent
+            - En el instructivo del NIST solo se quedaban en el promedio de las mediciones
+- Armar sensor de temperatura simultánea
+    - Arduino + Pt100 o medidor de variables atmosféricas (podría registrar la humedad)
+- Guardar todo en GitHub
+    - Crear un manual de operación (castellano e inglés)
+    - Página del BIPM están los lineamientos por receptor
+- Cal/Val del receptor viajero
+    - Calibración en IGN
+    - Validación con AGGO
+        - Cambiaron cables en el interín y no saben si los actuales se corresponden con lo que se calibró con el receptor del NIST 
