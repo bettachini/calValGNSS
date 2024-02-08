@@ -35,3 +35,5 @@ Antenna cable with TNC male terminals
 
 Interspacing the antenna cable: two BNC female barrels and two tnc female - bnc male adapters 
 -> 380.9 ns (1 V threshold), 383.1 ns (2 V threshold), none (3 V), 395.1 ns (2.5 V), 380.6 ns (0.5 V, the recommended level in Rovera et al 2015)
+
+Al measurements data at [Cuaderno receptor viajero](https://www.overleaf.com/project/65c50c5770ce777dd70478c1)
