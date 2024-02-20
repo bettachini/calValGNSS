@@ -1,5 +1,22 @@
 # Journal
 
+## 2024-02-19
+Tras conectar con cable USB al TIC BNC el código
+```
+inst = rm.open_resource('USB0::0x164E::0x0FA4::TW00048101::INSTR')
+print(inst.query("*IDN?"))
+```
+indicó que requería la biblioteca `pyusb`. Tras instalarla con `pip install pyusb`.
+Con eso bastó para lograr comunicarse.
+
+Ahora le pide automáticamente la descripción de la dirección USB.
+
+Alimenté con dos señales cuadradas de 1.2 kHz a través de dos cables de distinta longitud.
+
+Levanta el código `intento.ipynb`, cada minuto, frecuencia en un canal y diferencia de fase entre ambas.
+
+
+
 ## 2024-02-08
 
 ### Py-visa
