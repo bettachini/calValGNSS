@@ -1,0 +1,33 @@
+\tikzset{arrow/.style={-stealth, thick, draw=gray!80!black}}
+
+\begin{tikzpicture}[ampersand replacement=\&]
+
+\node[text width=3cm] at (0.3,0.75) 
+    {Antenna};
+\node[text width=3cm] at (5.2,0.75) 
+    {Receiver};
+\node[text width=2.5cm] at (10,0) 
+    {Time Reference};
+
+\node[rectangle, rounded corners, draw, fill=gray!20, minimum height=1cm, minimum width=2.5cm] at (0,0) (A) {\textsc{Novatel 750}};	
+\node[rectangle, rounded corners, draw, fill=gray!20, minimum height=1cm, minimum width=2.3cm] at (5,0) (R) {\textsc{PolaRx5TR}};      
+\node[rectangle, rounded corners, draw, fill=gray!20, minimum height=1cm, minimum width=2cm] at (10,-1) (C) {\textsc{UTC(local)}};
+
+
+\node[text width=3cm] at (0.3,-1.25) 
+    {Local Antenna};
+\node[text width=3cm] at (5.2,-1.25) 
+    {Local Receiver};
+
+
+\node[rectangle, rounded corners, draw, fill=gray!20, minimum height=1cm, minimum width=2.5cm] at (0,-2) (B) {\textsc{      }};	
+\node[rectangle, rounded corners, draw, fill=gray!20, minimum height=1cm, minimum width=2.5cm] at (5,-2) (S) {\textsc{      }};      
+
+ 
+\path[arrow] (A) edge (R)
+(C) edge (R)
+(B) edge (S)
+(C) edge (S)
+;
+
+\end{tikzpicture}

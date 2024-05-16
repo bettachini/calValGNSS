@@ -1,0 +1,47 @@
+	
+\tikzset{arrow/.style={-stealth, thick, draw=gray!80!black}}
+
+\begin{tikzpicture}[ampersand replacement=\&]
+
+\node[text width=3cm] at (0.7,0.75) 
+    {Antenna};
+\node[text width=3cm] at (5.5,0.75) 
+    {Receiver};
+\node[text width=2.5cm] at (10,1) 
+    {Time Reference};
+
+
+%    \node[rectangle, rounded corners, draw, fill=gray!20, minimum height=1cm] at (0,0) (A) {\textsc{Novatel 750}};	
+%    \node[rectangle, rounded corners, draw, fill=gray!20, minimum height=1cm] at (5,0) (R) {\textsc{Polar5xTR}};      
+%    \node[rectangle, rounded corners, draw, fill=gray!20, minimum height=1cm] at (10,0) (C) {\textsc{UTC(local)}};
+
+
+\node[rectangle, rounded corners, draw, fill=gray!20, minimum height=1cm, minimum width=2.5cm] at (0,0) (A) {\textsc{      }};	
+\node[rectangle, rounded corners, draw, fill=gray!20, minimum height=1cm, minimum width=2.3cm] at (5,0) (R) {\textsc{      }};      
+\node[rectangle, rounded corners, draw, fill=gray!20, minimum height=1cm, minimum width=2cm] at (10,0) (C) {\textsc{UTC(local)}};
+
+
+
+\draw [-] (5,-0.5) -- (5,-0.6) node [midway, below] {\scriptsize PPS out};
+\draw [|-|, draw=blue] (0,-1.5) -- (1.3,-1.5) node [midway, fill=white,text=blue] {$X_{S,i}$};
+\draw [|-|] (1.3,-1) -- (3.8,-1) node [midway, fill=white] {$X_{C}+ X_{D}$};
+\draw [|-|, draw=blue] (3.8,-1.5) -- (5,-1.5) node [midway, fill=white, text=blue] {$X_{R,i}$};
+\draw [|-|] (5,-2) -- (6.2,-2) node [midway, fill=white] {$X_{0}$};
+\draw [|-|] (6.2,-1) -- (8.8,-1) node [midway, fill=white] {$X_{P}$};
+
+
+
+\draw [|-|] (5,-3) -- (8.8,-3) node [midway, above] {\textsc{REFDLY} $= X_{0} + X_{P}$};
+\draw [|-|] (1.3,-3) -- (3.8,-3) node [midway, above] {CABDLY $= X_{C} + X_{D}$};
+
+\node[text width=4cm, text=blue] at (4.5,-4) (O) {\textsc{INTDLY} = $X_{S,i} + X_{R,i}$};
+ 
+\path[arrow] (A) edge (R)
+(C) edge (R)
+;
+
+%\path[arrow, dotted, draw = blue] (C) edge (R)
+%;
+
+
+\end{tikzpicture}

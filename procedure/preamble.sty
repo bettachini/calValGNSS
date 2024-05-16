@@ -1,0 +1,125 @@
+%Import Packages
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext}                          %Just for this template
+
+\usepackage{amsmath, amssymb, cancel}           %define maths areas 
+\numberwithin{equation}{section}                %so equations are fully numbered
+
+\usepackage[hidelinks]{hyperref}                %allows hyperlinks
+\usepackage{pgfplots, pgfplotstable, svg}       %plot packages
+\usepackage[font=small]{caption}                %Allows for captions, makes text small
+\usepackage[symbol]{footmisc}                   %Allows variation in footnote symbols
+\usepackage{parskip}                            %allows variation on paragraph spacing
+\usepackage{subcaption}                         %for subcaptions
+\usepackage{enumerate}                          %different enumerate options
+\usepackage[none]{hyphenat}                     %Prevents word hyphenation over lines
+\usepackage{tocloft}                            %Used to change formatting of Contents and Lists 
+\usepackage[
+    left=2.5cm,
+    right=2.5cm,
+    top=3cm,
+    bottom=3cm
+]{geometry} %Check what geometry you need before using!
+
+\usepackage{etoolbox} %Hides automatic References title
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
+\usepackage{sectsty} %For automatic centering of section etc titles
+\sectionfont{\centering}
+\partfont{\centering}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+%Produce Shorthand Commands
+
+\newcommand{\pfrac}[2]{\dfrac{\partial #1}{\partial #2}}
+\newcommand{\diffrac}[2]{\dfrac{d #1}{d #2}} 
+\renewcommand{\bf}[1]{\mathbf{#1}}
+\renewcommand{\cal}[1]{\mathcal{#1}}
+\renewcommand{\Re}[1]{\mathbb{R}}
+\newcommand{\lf}{\left}
+\newcommand{\rt}{\right}
+\newcommand{\mbf}{\mathbf}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+%Adjust Contents, Figure and Table Lists 
+
+\renewcommand{\cfttoctitlefont}{\hspace*{\fill}\LARGE\bfseries}
+\renewcommand{\cftaftertoctitle}{\hspace*{\fill}}
+\renewcommand{\contentsname}{Table of Contents}
+
+\renewcommand{\cftlottitlefont}{\hspace*{\fill}\Large\bfseries}
+\renewcommand{\cftafterlottitle}{\hspace*{\fill}}
+
+\renewcommand{\cftloftitlefont}{\hspace*{\fill}\Large\bfseries}
+\renewcommand{\cftafterloftitle}{\hspace*{\fill}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+%Format of Sections etc
+
+\newcommand{\thenewsection}{\arabic{section}.}
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.}
+\renewcommand{\theequation}{\thenewsection\arabic{equation}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+%Define bibliography style
+
+\bibliographystyle{unsrt}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+%Title style
+
+\title{
+    \includegraphics[width=0.5\columnwidth]{Figures/logo-sim.png}
+    \vskip 1in \par
+    \textbf{SIM GNSS Travelling System: Measurement Procedure}
+    \vskip 0.5in \par
+    \large{
+        Version 0
+%        \vskip 0.15in
+%        by
+%        \vskip 0.10in 
+    }
+}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+%Makes the thanks footnotes symbols
+\makeatletter
+\renewcommand*{\@fnsymbol}[1]{%
+  \ifcase#1
+  \or $\star$
+  \or $\dagger\ $
+  \or $\ddagger\ $
+  \else
+  \@ctrerr
+  \fi
+}
+\makeatother
+
+
+%Authors
+\author{
+    \textbf{SIM Time and Frequency MWG5}\thanks{ Contact: Diego Luna, \texttt{\url{luna@inti.gob.ar}}}%, \ \& \ 
+    \textbf{ }\thanks{Contact: Víctor Bettachini,  \texttt{\url{vbettachini@ign.gob.ar}}}  \ \\ \ \\
+%    Supervised by Professor X
+}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%I'm sure you can figure out what this does!
+%\date{Submitted \today}
+
+
+%To appease the overleaf lords
+\pgfplotsset{compat=1.18}
+
+
+  
+
+
